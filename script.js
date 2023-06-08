@@ -21,7 +21,8 @@
 
     var filteredKeyWords = [
         "futa*",
-        "futanari*"
+        "futanari*",
+        "Jaune Arc/Everyone"
     ];
 
 
