@@ -47,8 +47,11 @@
     var bookmarksRegex = "/users.*/bookmarks.*"
     var searchRegex = "/works.*/search";
     var specificWorkRegex = "/works/\\d+$"
+    var newWorkRegex = "/works/new$"
+    var newWorkPreviewRegex = "/works/\\d+/preview$"
+    var editWorkPreviewRegex = "/works/\\d+/edit"
 
-    if(!isSiteFor(specificWorkRegex) && !isSiteFor(searchRegex) && (isSiteFor(worksOverviewRegex) || isSiteFor(tagsRegex) || isSiteFor(userRegex) || isSiteFor(bookmarksRegex))){
+    if(!isSiteFor(editWorkPreviewRegex) && !isSiteFor(newWorkPreviewRegex) && !isSiteFor(newWorkRegex) && !isSiteFor(specificWorkRegex) && !isSiteFor(searchRegex) && (isSiteFor(worksOverviewRegex) || isSiteFor(tagsRegex) || isSiteFor(userRegex) || isSiteFor(bookmarksRegex))){
 
         var keyWords = filteredKeyWords.join();
 
