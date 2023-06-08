@@ -22,7 +22,9 @@
     var filteredKeyWords = [
         "futa*",
         "futanari*",
-        "Jaune Arc/Everyone"
+        "Jaune Arc/Everyone",
+        "Jaune Arc/Velvet Scarlatina",
+        "Jaune Arc/Blake Belladonna",
     ];
 
 
@@ -39,13 +41,14 @@
 
     var websiteUrl = document.URL;
 
-    var worksRegex = "/works.*";
+    var worksOverviewRegex = "/works.*";
     var tagsRegex = "/tags/.*/works.*";
     var userRegex = "/users.*/works.*";
     var bookmarksRegex = "/users.*/bookmarks.*"
     var searchRegex = "/works.*/search";
+    var specificWorkRegex = "/works/\\d+$"
 
-    if(!isSiteFor(searchRegex) && (isSiteFor(worksRegex) || isSiteFor(tagsRegex) || isSiteFor(userRegex) || isSiteFor(bookmarksRegex))){
+    if(!isSiteFor(specificWorkRegex) && !isSiteFor(searchRegex) && (isSiteFor(worksOverviewRegex) || isSiteFor(tagsRegex) || isSiteFor(userRegex) || isSiteFor(bookmarksRegex))){
 
         var keyWords = filteredKeyWords.join();
 
